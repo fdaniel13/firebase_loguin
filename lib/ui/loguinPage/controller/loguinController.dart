@@ -30,6 +30,7 @@ class LoguinController{
         bool sucess= await FirebaseRepositorie().singInUser(this.email.text,this.password.text);
         this.email.clear();
         this.password.clear();
+        print(await FirebaseRepositorie().verifyUserLog());
         return sucess;
 
     }
